@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="txt">
+<br>
+<p id="resultA"></p>
+
+<script>
+
+    document.getElementById('txt').addEventListener('keyup', (e) => {
+        var chuVi = tinhChuVi(Number(e.target.value));
+        var dienTich = tinhDienTich(Number(e.target.value));
+        document.getElementById('resultA').innerHTML = "chu Vi = " + chuVi + ", dien tich = " + dienTich;
+    })
+
+    function tinhChuVi(a) {
+        return a * 4;
+    }
+
+    function tinhDienTich(a) {
+        return a * a;
+    }
+
+
+</script>
+</body>
+</html>
